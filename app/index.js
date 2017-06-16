@@ -9,5 +9,9 @@ let greetings = `${a} morning`;
 let greetings2 = a + " "+ "morning";
 
 console.log(greetings);
-
 console.log(greetings2);
+
+
+let b = 'birsthday';
+let c = `Happy ${b} `;
+console.log(c);
