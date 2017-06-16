@@ -1,16 +1,13 @@
 // ES 6 new concepts
 // const is read-only
-const emails =['frodo@email.com', 'samwise@email.com', 'merry@email.com'];
+// backticks shift-^: ``
 
-emails.push('pipi@email.com');
+let a = `good`;
+let greetings = `${a} morning`;
 
-console.log(emails);
+// thats the same as
+let greetings2 = a + " "+ "morning";
 
-const limit = 200;
-// block scoping limit in a block
-{
-  const limit= 20;
-  console.log('backstage limit: ', limit);
-}
+console.log(greetings);
 
-console.log('overall venue limit', limit);
+console.log(greetings2);
