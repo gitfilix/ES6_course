@@ -1,0 +1,5 @@
+// generate a json project file
+npm init -y
+
+// install webpack
+npm install --save-dev webpack
