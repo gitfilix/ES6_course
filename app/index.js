@@ -1,17 +1,20 @@
 // ES 6 new concepts
-// const is read-only
-// backticks shift-^: ``
+// spread operators
 
-let a = `good`;
-let greetings = `${a} morning`;
-
-// thats the same as
-let greetings2 = a + " "+ "morning";
-
-console.log(greetings);
-console.log(greetings2);
+let a = [20, 30, 40, 50];
+let b = [11, 12, ...a, 13];
+console.log(b);
 
 
-let b = 'birsthday';
-let c = `Happy ${b} `;
-console.log(c);
+let namesD = ['Dana', 'Daphne', 'Duffy'];
+let namesA = ['Alice', ...namesD, 'Amoranama', 'Alphamara'];
+
+console.log(namesA);
+
+
+
+function collect(...x){
+  console.log("collect returns: ", x);
+}
+
+collect(1, 2, 3, 4, 5, 6);
