@@ -1,20 +1,15 @@
 // ES 6 new concepts
-// spread operators
+// methods and modules
 
-let a = [20, 30, 40, 50];
-let b = [11, 12, ...a, 13];
-console.log(b);
-
-
-let namesD = ['Dana', 'Daphne', 'Duffy'];
-let namesA = ['Alice', ...namesD, 'Amoranama', 'Alphamara'];
-
-console.log(namesA);
-
-
-
-function collect(...x){
-  console.log("collect returns: ", x);
+// varible atached to ne
+let cheer = () => {
+  console.log("normal ArrowFunction with a let-variable: Woohohooo");
 }
 
-collect(1, 2, 3, 4, 5, 6);
+cheer();
+
+
+// anonimus function expression
+setTimeout( ()=> {
+  console.log("Woohohooo ArrowFunctions");
+}, 1000);
