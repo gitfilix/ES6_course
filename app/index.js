@@ -1,21 +1,41 @@
 // ES 6 new concepts
-// methods and modules
+// strings helper methods
 
-let values = [20, 30, 40];
+let b = "wooo" + "oo".repeat(50) + "hooo !";
+console.log(b);
 
-// standalone function double
-// let double = (n) => {
-//   return n*2;
-// }
+// with template strings
+let c = `"woo${"oo".repeat(10)} !" `;
+console.log(c);
 
-let doubled = values.map(n => n*2);
 
-console.log('doubled values are: ', doubled);
+//searching in strings
 
-// filter:
+// is string beginning with butter?
+console.log(
+  "butterfly".startsWith("butter")
+);
+// is string beginning with fly?
+console.log(
+  "butterfly".startsWith("fly")
+);
 
-let points = [7, 115, 17, 21, 14, 5, 78, 95, 157, 71, 2];
+// is string beginning with fly?
+console.log(
+  "butterfly".endsWith("fly")
+);
 
-let highScores = points.filter((n) => n > 15);
+// is string fly within?
+console.log(
+  "butterfly".includes("fly")
+);
 
-console.log('highScores: ', highScores);
+// is string "tt" within?
+console.log(
+  "butterfly".includes("tt")
+);
+
+// is string "" within?
+console.log(
+  "butterfly".includes("caterpillar")
+);
