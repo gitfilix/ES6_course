@@ -1,13 +1,14 @@
 // ES 6 new concepts
-// strings helper methods with numbers
+// modules
 
-// check if number is finite
-const addToCart = (item, number) => {
-  return Number.isFinite(number) && Number.isSafeInteger(number);
-}
+import { fellowship, total } from './fellowship';
 
-// wayy to high
-console.log(addToCart('shirt', Math.pow(3, 45)));
+import { add, multiply } from './math';
 
-// way okay
-console.log(addToCart('shirt', 53545));
+console.log(fellowship);
+console.log(total);
+
+console.log('multiply of 3 x 6: ', multiply(3, 6));
+
+console.log('add of 3 + 6: ', add(3, 6));
+ 

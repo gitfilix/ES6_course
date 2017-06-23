@@ -14,5 +14,8 @@ git status
 git add <file>
 
 
+// commit da shit
+git commit -a -m "string helper methods numberchecking"
+
 // have a new branch locally and want to have it also in the repo remote
 git push --set-upstream origin modules
