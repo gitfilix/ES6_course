@@ -5,11 +5,12 @@
 let cheer = () => {
   console.log("normal ArrowFunction with a let-variable: Woohohooo");
 }
-
+// call it
 cheer();
 
 
-// anonimus function expression
+
+// anonymous function expression to 
 setTimeout( ()=> {
   console.log("Woohohooo ArrowFunctions");
 }, 1000);

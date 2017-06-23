@@ -1,0 +1,18 @@
+
+Config:
+
+// set git to adobt new simple behavior
+git config --global pus.default simple
+
+
+
+Operations:
+// whatsup git? which branch and what files?
+git status
+
+//add a new file
+git add <file>
+
+
+// have a new branch locally and want to have it also in the repo remote
+git push --set-upstream origin modules
