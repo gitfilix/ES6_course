@@ -1,5 +1,11 @@
+//Install webpack globally with
+`npm install webpack -g'.
+
 // generate a json project file
 npm init -y
 
 // install webpack
 npm install --save-dev webpack
+
+// start webpack server
+npm start

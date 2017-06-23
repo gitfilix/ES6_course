@@ -68,10 +68,18 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-console.log('hi with webpack');
+"use strict";
 
+
+// ES 6 new concepts
+// destructing
+var z = [4, 5, 6, 7];
+var four = z[0],
+    five = z[1];
+
+console.log(four, five);
 
 /***/ }),
 /* 1 */
