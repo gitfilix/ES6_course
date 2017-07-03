@@ -2,21 +2,17 @@
 // Classes in JS
 
 // realate to each other throug inheritance
-import Animal from './Animal';
 
+class Calculator{
+    static multiply(a, b){
+      return a*b;
+    }
 
-// inheritance from external class
-class Lion extends Animal {
-  constructor(name, height, color){
-    // to use this keyword
-    super(name, height);
-    this.color = color;
-
-  }
-  helloLion(){
-    console.log(`Hi! I am ${this.name} from Pride Rock!`);
-  }
+    static add(a, b){
+      return a+b;
+    }
 }
 
-let son = new Lion("Simba" , 2, "golden");
-son.helloLion();
+
+let a = Calculator.add(5, 7);
+console.log(a);
