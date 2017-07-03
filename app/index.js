@@ -2,20 +2,21 @@
 // Classes in JS
 
 // realate to each other throug inheritance
+import Animal from './Animal';
 
 
-// animal Classes
-class Animal {
-  constructor(name, height) {
-    this.name = name;
-    this.height = height;
+// inheritance from external class
+class Lion extends Animal {
+  constructor(name, height, color){
+    // to use this keyword
+    super(name, height);
+    this.color = color;
+
   }
-  hello(){
-    console.log(`Hi! I'am ${this.name} and I am so tall: ${this.height}. I am form the Animal kingdom. `);
+  helloLion(){
+    console.log(`Hi! I am ${this.name} from Pride Rock!`);
   }
 }
 
-
-
-let king = new Animal("Mufassa", 4.5);
-king.hello()
+let son = new Lion("Simba" , 2, "golden");
+son.helloLion();
