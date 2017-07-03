@@ -1,20 +1,21 @@
 // ES 6 new concepts
-// spread operators
+// Classes in JS
 
-let a = [20, 30, 40, 50];
-let b = [11, 12, ...a, 13];
-console.log(b);
+// realate to each other throug inheritance
 
 
-let namesD = ['Dana', 'Daphne', 'Duffy'];
-let namesA = ['Alice', ...namesD, 'Amoranama', 'Alphamara'];
-
-console.log(namesA);
-
-
-
-function collect(...x){
-  console.log("collect returns: ", x);
+// animal Classes
+class Animal {
+  constructor(name, height) {
+    this.name = name;
+    this.height = height;
+  }
+  hello(){
+    console.log(`Hi! I'am ${this.name} and I am so tall: ${this.height}. I am form the Animal kingdom. `);
+  }
 }
 
-collect(1, 2, 3, 4, 5, 6);
+
+
+let king = new Animal("Mufassa", 4.5);
+king.hello()
