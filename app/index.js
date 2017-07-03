@@ -1,18 +1,21 @@
 // ES 6 new concepts
 // Classes in JS
+// Prototypes in action
 
-// realate to each other throug inheritance
+function Wizard(name, house, pet){
+  this.name = name;
+  this.house = house;
+  this.pet = pet;
 
-class Calculator{
-    static multiply(a, b){
-      return a*b;
-    }
-
-    static add(a, b){
-      return a+b;
-    }
+  this.greet = () => {
+    return `I 'm ${this.name} from ${this.house} `;
+  }
 }
 
+Wizard.prototype.pet_name;
 
-let a = Calculator.add(5, 7);
-console.log(a);
+let harry = new Wizard("Harry", "Gryffendor", "Owl");
+harry.pet_name ="Hedwig";
+
+
+console.log(harry);
