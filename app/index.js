@@ -1,20 +1,18 @@
 // ES 6 new concepts
-// spread operators
+// Closures - private
 
-let a = [20, 30, 40, 50];
-let b = [11, 12, ...a, 13];
-console.log(b);
-
-
-let namesD = ['Dana', 'Daphne', 'Duffy'];
-let namesA = ['Alice', ...namesD, 'Amoranama', 'Alphamara'];
-
-console.log(namesA);
-
-
-
-function collect(...x){
-  console.log("collect returns: ", x);
+let call = () => {
+  // private
+  let secret = 'schawaskribt ES-6 rocks !';
+  // reveal the private to outside
+  let reveal = () => {
+    console.log(secret);
+  }
+  // reveal can be accessed from outside
+  return reveal;
 }
 
-collect(1, 2, 3, 4, 5, 6);
+// unveil calls call function
+let unveil = call();
+// call unveil
+unveil();
