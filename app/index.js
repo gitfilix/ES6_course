@@ -3,23 +3,11 @@
 
 // promises exist in three states: pending, fulfilled, and rejected
 // promises
-let p = new Promise((resolve, reject) => {
+const root = 'http://jsonplaceholder.typicode.com/posts/1';
 
-  setTimeout(
-    () => resolve('Resolved promise data'), 1500
-  );
+const googlebooks = 'https://www.googleapis.com/books/v1/volumes?q=isbn:';
 
-
-});
-
-// chain of flow
-//access promise by consuming the promise and
-p.then(response =>
-  console.log(response)
-)
-// catch error
-.catch(error =>
-  console.log(error)
-);
-//
-console.log('after promise comsumption');
+fetch(googlebooks, {
+  method: "GET"
+}).then(response => response.json())
+  .then(json => console.log(json));
