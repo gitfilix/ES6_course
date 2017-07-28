@@ -4,10 +4,15 @@
 // promises exist in three states: pending, fulfilled, and rejected
 // promises
 let p = new Promise((resolve, reject) => {
-  // resolve('Resolved promise data');
-  reject('Rejected promise data');
+
+  setTimeout(
+    () => resolve('Resolved promise data'), 1500
+  );
+
+
 });
 
+// chain of flow
 //access promise by consuming the promise and
 p.then(response =>
   console.log(response)
@@ -17,3 +22,4 @@ p.then(response =>
   console.log(error)
 );
 //
+console.log('after promise comsumption');
