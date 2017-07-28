@@ -1,53 +1,36 @@
 // ES 6 new concepts
 // Closures - private
 
-let call = () => {
-  // private
-  let secret = 'schawaskribt ES-6 rocks !';
-  // reveal the private to outside
-  let reveal = () => {
-    console.log(secret);
+const budget = () => {
+  //private
+  let balance = 0;
+  // private Methode inside - not returning
+  let changeBal = (val) => {
+    return balance += val;
   }
-  // reveal can be accessed from outside
-  return reveal;
+
+  // methods with returning
+  const deposit20 = () => changeBal(20);
+  const withdraw20 = () => changeBal(-20);
+  const check = () => balance;
+
+
+  return {
+    deposit20: deposit20,
+    withdraw20: withdraw20,
+    check: check
+  }
+
+
 }
 
-// unveil calls call function
-let unveil = call();
-// call unveil
-unveil();
 
+let wallet = budget();
+console.log("wallet: ", wallet);
 
-
-//function factory
-const addSuffix = (x) => {
-  const concat = (y) => {
-    return y + x;
-  }
-  return concat;
-}
-
-let add_ness = addSuffix("ness");
-console.log(add_ness);
-
-let h = add_ness("happy");
-console.log(h);
-
-// factory 2
-const product = (x) => {
-  return y => {
-    return y * x
-  }
-}
-
-// factory 2 shortened
-const product2 = x => y => y * x;
-
-let multiple5 = product(5);
-let double = product(2);
-
-// let multiple5 = product2(5);
-// let double = product2(2);
-
-console.log("multiple5(3): ",multiple5(3));
-console.log("double(9): ",double(9));
+wallet.deposit20();
+wallet.withdraw20();
+console.log("wallet.check:", wallet.check());
+console.log("wallet.deposit20:", wallet.deposit20());
+console.log("wallet balance", wallet.balance); // undefined cause private
+console.log("wallet withdraw20: ", wallet.withdraw20());
