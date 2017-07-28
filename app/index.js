@@ -1,20 +1,19 @@
 // ES 6 new concepts
-// spread operators
+// Asynchronous programming
 
-let a = [20, 30, 40, 50];
-let b = [11, 12, ...a, 13];
-console.log(b);
+// promises exist in three states: pending, fulfilled, and rejected
+// promises
+let p = new Promise((resolve, reject) => {
+  // resolve('Resolved promise data');
+  reject('Rejected promise data');
+});
 
-
-let namesD = ['Dana', 'Daphne', 'Duffy'];
-let namesA = ['Alice', ...namesD, 'Amoranama', 'Alphamara'];
-
-console.log(namesA);
-
-
-
-function collect(...x){
-  console.log("collect returns: ", x);
-}
-
-collect(1, 2, 3, 4, 5, 6);
+//access promise by consuming the promise and
+p.then(response =>
+  console.log(response)
+)
+// catch error
+.catch(error =>
+  console.log(error)
+);
+//
