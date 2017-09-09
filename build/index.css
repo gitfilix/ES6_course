@@ -11,4 +11,16 @@ body{
 .global{
     background: #F3F3F3;
     border-top: 1px solid #D33;
+    text-align: center;
+    padding: 10px;
+}
+
+.searchButton{
+    color: #D33;
+    cursor: pointer;
+}
+
+.gallery{
+    border-top: 1px dotted #D33;
+    background: #F7F7F7;
 }
