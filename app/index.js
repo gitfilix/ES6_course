@@ -1,8 +1,8 @@
 // react book project
 import React from 'react';
 import ReactDom from 'react-dom';
-
+import Global from './components/Global';
 
 ReactDom.render(
-    <div>React Application!</div>, document.getElementById('root')
+    <Global />, document.getElementById('root')
 )

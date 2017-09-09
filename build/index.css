@@ -7,3 +7,8 @@ body{
     max-width: 700px;
     background: #DEDEDE;
 }
+
+.global{
+    background: #F3F3F3;
+    border-top: 1px solid #D33;
+}
